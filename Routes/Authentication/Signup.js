@@ -22,6 +22,7 @@ SignupRoute.post("/signup", async (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: securedPassword,
+        avatarURL: req.body.avatarURL,
         verified: false,
         otp: OTP,
         currentRole: "a",
@@ -38,9 +39,9 @@ SignupRoute.post("/signup", async (req, res) => {
         req.body.email,
         "Verification Email",
         "Hellow " +
-          req.body.username +
-          " Your one time password for signing up with our app is :  " +
-          OTP
+        req.body.username +
+        " Your one time password for signing up with our app is :  " +
+        OTP
       );
 
       res.status(200).json({

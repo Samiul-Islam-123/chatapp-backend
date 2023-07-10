@@ -8,6 +8,19 @@ const UserSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  avatarURL: {
+    type: String,
+    require: true,
+  },
+
+  contacts: [{
+
+    username: String,
+    userAvatarURL: String,
+    contactID: String
+
+  }],
+
   password: {
     type: String,
     required: true,
